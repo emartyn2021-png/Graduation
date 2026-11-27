@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import type { CSSProperties } from "react";
 
-type Item = { caption: string; bg: string; image?: string };
+type Item = { image?: string; caption?: string; bg: string };
 
 export default function Gallery({ items }: { items: Item[] }) {
   const rail = useRef<HTMLDivElement>(null);
@@ -34,20 +34,25 @@ export default function Gallery({ items }: { items: Item[] }) {
   return (
     <>
       <div className="rail" ref={rail} tabIndex={0} aria-label="Photo gallery, swipe sideways">
-        {items.map((item) => (
-          <figure
-            key={item.caption}
-            style={{ "--bg": item.image ? `center / cover url(${item.image})` : item.bg } as CSSProperties}
-          >
+        {items.map((item, i) => (
+          <figure key={item.image ?? i} style={{ "--bg": item.bg } as CSSProperties}>
+            {item.image && <GalleryImage src={item.image} />}
             <figcaption>{item.caption}</figcaption>
           </figure>
         ))}
       </div>
       <div className="dots" aria-hidden="true">
         {items.map((item, i) => (
-          <i key={item.caption} className={i === active ? "on" : undefined} />
+          <i key={item.image ?? i} className={i === active ? "on" : undefined} />
         ))}
       </div>
     </>
   );
+}
+
+function GalleryImage({ src }: { src: string }) {
+  const [failed, setFailed] = useState(false);
+  if (failed) return null;
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src={src} alt="" onError={() => setFailed(true)} />;
 }

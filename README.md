@@ -14,8 +14,7 @@ npm run build && npm start
 ## Edit it
 
 - **Text, names, dates, milestones, gift link:** `app/content.ts`
-- **Hero photo:** put an image at `public/graduation-photo.jpg` (a placeholder shows until you do)
-- **Gallery photos:** add files under `public/` and set `image` on items in `app/content.ts`
+- **Photos:** images live in `public/` (hero: `new.jpg`; gallery: `1`, `2`, `5`, `4.jpeg`). Change the paths in `app/content.ts`
 - **Styles:** `app/globals.css`
 
 ## Structure
@@ -25,3 +24,5 @@ npm run build && npm start
 - `app/components/Envelope.tsx` — the sealed opener
 - `app/components/HeroPhoto.tsx` — photo with fallback
 - `app/components/Gallery.tsx` — swipe rail with position dots
+- `app/components/Section.tsx` — section that animates in when scrolled into view
+- `app/components/GradArt.tsx` — the floating cap-and-diploma illustration

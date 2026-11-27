@@ -1,6 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, Pinyon_Script } from "next/font/google";
+import { Cinzel, Cormorant_Garamond, Pinyon_Script } from "next/font/google";
 import "./globals.css";
+
+const cin = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"],
+  variable: "--font-cin",
+});
 
 const serif = Cormorant_Garamond({
   subsets: ["latin"],
@@ -28,7 +34,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${serif.variable} ${script.variable}`}>
+    <html lang="en" className={`${cin.variable} ${serif.variable} ${script.variable}`}>
       {/* "locked" stops scrolling until the envelope is opened; Envelope removes it. */}
       <body className="locked">{children}</body>
     </html>

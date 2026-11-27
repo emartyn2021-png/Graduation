@@ -4,22 +4,22 @@ export const graduate = {
   name: "Christiana Mariatu Conteh",
   degree: "Master of Science in Public Health Science",
   university: "UNIMARK",
-  classOf: "Class of 2026",
-  conferredOn: "8/11/2026",
-  // Drop the photo into /public with this name (or change the path).
-  photo: "/graduation-photo.jpg",
+  classOf: "CLASS OF 2026",
+  attestedOn: "28/11/2026",
+  // Files in /public are served from the site root.
+  photo: "/new.jpg",
 };
 
-// Leave empty ("") to show "Gift link coming soon" instead of a button link.
-export const PAYMENT_LINK = "https://pay.flotme.ai/mrcrispy";
+// Leave empty ("") to show "GIFT LINK COMING SOON" instead of a button link.
+export const PAYMENT_LINK = "https://app.flotme.ai/paytag/39c87bec-2701-435f-8702-7ba1541d5117";
 
 export const navLinks = [
-  { href: "#attest", label: "Attestation" },
-  { href: "#journey", label: "Journey" },
-  { href: "#milestones", label: "Milestones" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#thanks", label: "Thanks" },
-  { href: "#gift", label: "Gift" },
+  { href: "#attest", label: "ATTESTATION" },
+  { href: "#journey", label: "JOURNEY" },
+  { href: "#milestones", label: "MILESTONES" },
+  { href: "#gallery", label: "GALLERY" },
+  { href: "#thanks", label: "THANKS" },
+  { href: "#gift", label: "GIFT" },
 ];
 
 export const journey = [
@@ -33,15 +33,15 @@ export const milestones = [
   { title: "Coursework", detail: "Completed all taught modules" },
   { title: "Research proposal", detail: "Approved by my supervisor and the department" },
   { title: "Dissertation", detail: "Written, submitted and defended" },
-  { title: "Graduation", detail: `Degree conferred, ${graduate.conferredOn}` },
+  { title: "Graduation", detail: "Degree conferred, 2026" },
 ];
 
-// Add `image: "/gallery/xyz.jpg"` to any item to show a real photo.
-export const gallery: { caption: string; bg: string; image?: string }[] = [
-  { caption: "First day on campus", bg: "linear-gradient(160deg,#1a2f5c,#5a7fc4)" },
-  { caption: "Library nights", bg: "linear-gradient(160deg,#3a3f52,#a49a7c)" },
-  { caption: "Dissertation defence", bg: "linear-gradient(160deg,#142a54,#c9a45c)" },
-  { caption: "Graduation day", bg: "linear-gradient(160deg,#24427f,#9fb4dd)" },
+// `bg` shows while an image loads or if it is missing. `caption` is optional.
+export const gallery: { image?: string; caption?: string; bg: string }[] = [
+  { image: "/1.jpeg", bg: "linear-gradient(160deg,#1a2f5c,#5a7fc4)" },
+  { image: "/2.jpeg", bg: "linear-gradient(160deg,#3a3f52,#a49a7c)" },
+  { image: "/5.jpeg", bg: "linear-gradient(160deg,#142a54,#c9a45c)" },
+  { image: "/4.jpeg", bg: "linear-gradient(160deg,#24427f,#9fb4dd)" },
 ];
 
 export const thanks = [

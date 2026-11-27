@@ -23,7 +23,8 @@ export default function Envelope() {
     >
       <div className="flap top" />
       <div className="flap bot" />
-      <div className="pattern" />
+      <div className="meander m1" />
+      <div className="meander m2" />
       <button className="seal" aria-label="Open" onClick={openEnvelope} tabIndex={open ? -1 : 0}>
         <svg viewBox="0 0 64 64" aria-hidden="true">
           <path d="M32 12 4 26l28 14 28-14z" fill="#fff7df" />
@@ -31,7 +32,7 @@ export default function Envelope() {
           <path d="M56 28v18" stroke="#fff7df" strokeWidth="3" strokeLinecap="round" />
         </svg>
       </button>
-      <div className="tap">Tap the seal to open</div>
+      <div className="tap">TAP THE SEAL TO OPEN</div>
     </div>
   );
 }
